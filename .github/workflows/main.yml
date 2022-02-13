@@ -42,4 +42,4 @@ jobs:
         run: echo 'bg3.cs.wm.edu,128.239.2.102 ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBM3V0+z4cZJIoSgHSQk6bJYXBRAZ0aOKprIvn/rD6CtdHozyoB1shsnFlwG+I3XeteUwScJfTp61pvgjYj22e24=' >> ~/.ssh/known_hosts
         
       - name: Sync project files
-        run: rsync -avzr --delete dist/ zwang@bg3.cs.wm.edu:/home/zwang34/public_html/
+        run: rsync -avz --delete dist/ zwang34@bg3.cs.wm.edu:/home/zwang34/public_html/
