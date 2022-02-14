@@ -3,7 +3,7 @@ export declare interface CardProps {
     title: string
 }
 
-function Card(props: CardProps) {
+export default function Card(props: CardProps) {
     return(
         <div className="bg-white hover:bg-slate-300 rounded-md border-2 h-72 w-60 shrink-0">
             <img src={props.image} className="rounded-t-md"/>
@@ -11,5 +11,3 @@ function Card(props: CardProps) {
         </div>
     )
 }
-
-export default Card
