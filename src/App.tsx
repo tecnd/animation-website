@@ -1,5 +1,5 @@
 import './App.css'
-import {Route, Switch, Link} from 'wouter'
+import {Route, Router, Switch, Link} from 'wouter'
 
 import Card from './Card'
 import Planets from './Planets'
@@ -7,7 +7,7 @@ import planetsThumb from './images/planets.png'
 
 function App() {
   return (
-    <>
+    <Router base='/~zwang34'>
       <header className='flex justify-center align-center items-center'>
         <Link href='/' className="text-white text-3xl py-5">CSCI 417 Computer Animation</Link>
       </header>
@@ -23,7 +23,7 @@ function App() {
         </Route>
         <Route path='/planets'><Planets/></Route>
       </Switch>
-    </>
+    </Router>
   );
 }
 
