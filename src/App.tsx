@@ -1,4 +1,3 @@
-import './App.css'
 import {Route, Router, Switch, Link} from 'wouter'
 
 import Card from './Card'
