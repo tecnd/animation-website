@@ -6,7 +6,7 @@ import supernova from './images/supernova.png'
 
 export default function Planets() {
     return(
-        <div className='flex justify-center align-center items-center flex-col px-12 md:px-36 max-w-screen-xl mb-24 mx-auto'>
+        <div className='flex justify-center align-center items-center flex-col px-1 sm:px-12 md:px-36 max-w-screen-xl mb-24 mx-auto'>
             <h1 className='text-2xl'>Project 1: Solar System</h1>
             <h2 className='text-xl pb-5'>2/17/22</h2>
             <video controls src={planets1} className='w-full my-3'/>
