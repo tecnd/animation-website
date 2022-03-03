@@ -5,6 +5,7 @@ import Card from "./Card";
 import Planets from "./Planets";
 import planetsThumb from "./images/planets.png";
 import Treasure from "./Treasure";
+import treasureThumb from "./images/treasureThumb.png";
 
 // returns the current hash location in a normalized form
 // (excluding the leading '#' symbol)
@@ -53,7 +54,7 @@ function App() {
               <Link href="/treasure">
                 <a>
                   <Card
-                    image={planetsThumb}
+                    image={treasureThumb}
                     title="Treasure Chest"
                     subtitle="3/3/22"
                   />
