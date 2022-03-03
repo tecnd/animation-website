@@ -6,9 +6,31 @@ import Planets from "./Planets";
 import planetsThumb from "./images/planets.png";
 import Treasure from "./Treasure";
 
+// returns the current hash location in a normalized form
+// (excluding the leading '#' symbol)
+const currentLocation = () => {
+  return window.location.hash.replace(/^#/, "") || "/";
+};
+
+const useHashLocation = (): [string, (s: string) => string] => {
+  const [loc, setLoc] = React.useState(currentLocation());
+
+  React.useEffect(() => {
+    // this function is called whenever the hash changes
+    const handler = () => setLoc(currentLocation());
+
+    // subscribe to hash changes
+    window.addEventListener("hashchange", handler);
+    return () => window.removeEventListener("hashchange", handler);
+  }, []);
+
+  const navigate = (to: string) => (window.location.hash = to);
+  return [loc, navigate];
+};
+
 function App() {
   return (
-    <Router base="/~zwang34">
+    <Router hook={useHashLocation} base="/~zwang34">
       <div className="flex flex-col min-h-screen">
         <header className="flex flex-col justify-center align-center items-center mb-12">
           <Link href="/" className="text-3xl my-5 text-center">
