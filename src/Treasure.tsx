@@ -26,7 +26,11 @@ export default function Treasure() {
             Amazon
           </a>
           . I created a cube primitive and used the dimensions from the store
-          page to get the right size.
+          page to get the right size. I got the graphics model from{" "}
+          <a className="underline" href="https://skfb.ly/6UOoF">
+            https://skfb.ly/6UOoF
+          </a>
+          .
         </p>
       </div>
       <div className="grid grid-cols-2 grid-rows-2 gap-3">
