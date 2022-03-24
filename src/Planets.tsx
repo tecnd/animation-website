@@ -1,5 +1,3 @@
-import React from "react";
-
 import planets1 from "./videos/planets1.mp4";
 import planets2 from "./videos/planets2.mp4";
 import textured from "./images/textured.png";

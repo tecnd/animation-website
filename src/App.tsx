@@ -6,6 +6,8 @@ import Planets from "./Planets";
 import planetsThumb from "./images/planets.png";
 import Treasure from "./Treasure";
 import treasureThumb from "./images/treasureThumb.png";
+import Bounce from "./Bounce";
+import bounceThumb from "./images/treasureThumb.png";
 
 // returns the current hash location in a normalized form
 // (excluding the leading '#' symbol)
@@ -60,6 +62,15 @@ function App() {
                   />
                 </a>
               </Link>
+              <Link href="/bounce">
+                <a>
+                  <Card
+                    image={bounceThumb}
+                    title="Bouncing Ball"
+                    subtitle="3/24/22"
+                  />
+                </a>
+              </Link>
             </div>
           </Route>
           <Route path="/planets">
@@ -67,6 +78,9 @@ function App() {
           </Route>
           <Route path="/treasure">
             <Treasure />
+          </Route>
+          <Route path="/bounce">
+            <Bounce />
           </Route>
         </Switch>
       </div>

@@ -1,5 +1,3 @@
-import React from "react";
-
 export declare interface CardProps {
   image: string;
   title: string;

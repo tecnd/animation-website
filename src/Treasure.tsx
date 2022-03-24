@@ -1,5 +1,3 @@
-import React from "react";
-
 import treasure from "./videos/treasure.mp4";
 import wireframe from "./videos/treasureWireframe.mp4";
 import amazon from "./images/treasureAmazon.jpg";
