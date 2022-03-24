@@ -1,10 +1,11 @@
+import ImageTool from "./ImageTool";
 import treasure from "./videos/treasure.mp4";
 import wireframe from "./videos/treasureWireframe.mp4";
-import amazon from "./images/treasureAmazon.jpg";
-import ss from "./images/ss.png";
-import ss10 from "./images/ss10.png";
-import wf from "./images/wf.png";
-import wf10 from "./images/wf10.png";
+import amazon from "./images/treasureAmazon.jpg?h=540&format=jpg;avif;webp&imagetools&meta";
+import ss from "./images/ss.png?h=540&format=png;avif;webp&imagetools&meta";
+import ss10 from "./images/ss10.png?h=540&format=png;avif;webp&imagetools&meta";
+import wf from "./images/wf.png?h=540&format=png;avif;webp&imagetools&meta";
+import wf10 from "./images/wf10.png?h=540&format=png;avif;webp&imagetools&meta";
 
 export default function Treasure() {
   return (
@@ -14,7 +15,7 @@ export default function Treasure() {
       <video controls src={wireframe} className="w-full my-3" />
       <video controls src={treasure} className="w-full my-3" />
       <div className="flex justify-center align-center items-center flex-col md:flex-row pb-3">
-        <img src={amazon} className="md:w-1/2 pr-5" />
+        <ImageTool src={amazon} className="md:w-1/2 pr-5" />
         <p className="md:w-1/2">
           I referenced this chest I found on{" "}
           <a
@@ -32,10 +33,10 @@ export default function Treasure() {
         </p>
       </div>
       <div className="grid grid-cols-2 grid-rows-2 gap-3">
-        <img src={ss} />
-        <img src={ss10} />
-        <img src={wf} />
-        <img src={wf10} />
+        <ImageTool src={ss} />
+        <ImageTool src={ss10} />
+        <ImageTool src={wf} />
+        <ImageTool src={wf10} />
       </div>
     </div>
   );
