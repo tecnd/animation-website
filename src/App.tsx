@@ -7,7 +7,7 @@ import planetsThumb from "./images/planets.png";
 import Treasure from "./Treasure";
 import treasureThumb from "./images/treasureThumb.png";
 import Bounce from "./Bounce";
-import bounceThumb from "./images/treasureThumb.png";
+import bounceThumb from "./images/bounceThumb.png";
 
 // returns the current hash location in a normalized form
 // (excluding the leading '#' symbol)
