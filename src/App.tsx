@@ -3,13 +3,13 @@ import { Route, Router, Switch, Link } from "wouter";
 
 import Card from "./Card";
 import Planets from "./Planets";
-import planetsThumb from "./images/planets.png";
+import planetsThumb from "./images/planets.png?h=240&format=png;avif;webp&imagetools&meta";
 import Treasure from "./Treasure";
-import treasureThumb from "./images/treasureThumb.png";
+import treasureThumb from "./images/treasureThumb.png?h=240&format=png;avif;webp&imagetools&meta";
 import Bounce from "./Bounce";
-import bounceThumb from "./images/bounceThumb.png";
+import bounceThumb from "./images/bounceThumb.png?h=240&format=png;avif;webp&imagetools&meta";
 import Rube from "./Rube";
-import rubeThumb from "./images/rubeThumb.png";
+import rubeThumb from "./images/rubeThumb.png?h=240&format=png;avif;webp&imagetools&meta";
 
 // returns the current hash location in a normalized form
 // (excluding the leading '#' symbol)
