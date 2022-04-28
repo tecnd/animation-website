@@ -10,6 +10,8 @@ import Bounce from "./Bounce";
 import bounceThumb from "./images/bounceThumb.png?h=240&format=png;avif;webp&imagetools&meta";
 import Rube from "./Rube";
 import rubeThumb from "./images/rubeThumb.png?h=240&format=png;avif;webp&imagetools&meta";
+import Dominos from "./Dominos";
+import dominosThumb from "./images/dominosThumb.png?h=240&format=png;avif;webp&imagetools&meta";
 
 // returns the current hash location in a normalized form
 // (excluding the leading '#' symbol)
@@ -82,6 +84,15 @@ function App() {
                   />
                 </a>
               </Link>
+              <Link href="/dominos">
+                <a>
+                  <Card
+                    image={dominosThumb}
+                    title="Dominos"
+                    subtitle="4/28/22"
+                  />
+                </a>
+              </Link>
             </div>
           </Route>
           <Route path="/planets">
@@ -95,6 +106,9 @@ function App() {
           </Route>
           <Route path="/rube">
             <Rube />
+          </Route>
+          <Route path="/dominos">
+            <Dominos />
           </Route>
         </Switch>
       </div>
