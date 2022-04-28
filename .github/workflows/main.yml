@@ -6,9 +6,9 @@ name: Deploy
 on:
   # Triggers the workflow on push or pull request events but only for the main branch
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
-    branches: [ main ]
+    branches: [main]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -23,15 +23,15 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
           lfs: true
 
       - name: Setup Node.js environment
-        uses: actions/setup-node@v2.5.1
+        uses: actions/setup-node@v3
         with:
-          node-version: 16
-      - run: npm install
+          node-version: lts/*
+      - run: npm ci
       - run: npm run build
 
       - name: webfactory/ssh-agent
@@ -39,9 +39,9 @@ jobs:
         with:
           # Private SSH key to register in the SSH agent
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
- 
+
       - name: Setup known_hosts
         run: echo 'bg3.cs.wm.edu,128.239.2.102 ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBM3V0+z4cZJIoSgHSQk6bJYXBRAZ0aOKprIvn/rD6CtdHozyoB1shsnFlwG+I3XeteUwScJfTp61pvgjYj22e24=' >> ~/.ssh/known_hosts
-        
+
       - name: Sync project files
         run: rsync -avz --delete dist/ zwang34@bg3.cs.wm.edu:/home/zwang34/public_html/
