@@ -12,6 +12,8 @@ import Rube from "./Rube";
 import rubeThumb from "./images/rubeThumb.png?h=240&format=png;avif;webp&imagetools&meta";
 import Dominos from "./Dominos";
 import dominosThumb from "./images/dominosThumb.png?h=240&format=png;avif;webp&imagetools&meta";
+import Final from "./Final";
+import finalThumb from "./images/finalThumb.png?h=240&format=png;avif;webp&imagetools&meta";
 
 // returns the current hash location in a normalized form
 // (excluding the leading '#' symbol)
@@ -93,6 +95,15 @@ function App() {
                   />
                 </a>
               </Link>
+              <Link href="/final">
+                <a>
+                  <Card
+                    image={finalThumb}
+                    title="Final Project"
+                    subtitle="5/11/22"
+                  />
+                </a>
+              </Link>
             </div>
           </Route>
           <Route path="/planets">
@@ -109,6 +120,9 @@ function App() {
           </Route>
           <Route path="/dominos">
             <Dominos />
+          </Route>
+          <Route path="/final">
+            <Final />
           </Route>
         </Switch>
       </div>
